@@ -16,7 +16,7 @@ public:
 		double* y = new double[pointCount];
 		int ttt;
 		for (int pp = 0; pp < pointCount; pp++) {
-			//inputStream >> ttt >> x[pp] >> y[pp];
+			inputStream >> ttt >> x[pp] >> y[pp];
 		}
 		int ttRoadCount = pointCount * (pointCount - 1) / 2;
 		int tempWeight;
@@ -25,8 +25,8 @@ public:
 			int* curLine = new int[pointCount];
 			matrix[i] = curLine;
 			for (int j = 0; j < pointCount; j++) {
-				//tempWeight = (int)(sqrt((x[i] - x[j])*(x[i] - x[j]) + (y[i] - y[j])*(y[i] - y[j]))) + 1;
-				inputStream >> tempWeight;
+				tempWeight = (int)(sqrt((x[i] - x[j])*(x[i] - x[j]) + (y[i] - y[j])*(y[i] - y[j]))) + 1;
+				//inputStream >> tempWeight;
 				curLine[j] = tempWeight;
 			}
 		}
